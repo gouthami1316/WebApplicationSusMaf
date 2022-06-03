@@ -1,0 +1,69 @@
+GET http://localhost:4000/user-api/getusers
+###
+
+GET http://localhost:4000/user-api/getuser/3
+
+###
+POST http://localhost:4000/user-api/create-user
+Content-Type: application/json
+
+{
+    "username":"miran",
+    "password":"kiran",
+    "email":"kiran@gmail.com",
+    "city":"bangalore"
+
+}
+
+###
+POST http://localhost:4000/user-api/login
+Content-Type: application/json
+
+{
+    "username":"kiran",
+    "password":"kiran"
+}
+
+###
+PUT http://localhost:4000/user-api/updateuser
+
+###
+DELETE http://localhost:4000/user-api/getuser/2
+
+
+
+
+
+
+
+
+
+###
+GET http://localhost:4000/product-api/getproducts
+
+###
+GET http://localhost:4000/product-api/getproduct/2
+
+
+###
+POST http://localhost:4000/product-api/create-product
+Content-Type: application/json
+
+{
+    "pid":1,
+    "pname":"Macbook",
+    "Price":50000
+}
+
+###
+PUT http://localhost:4000/product-api/update-product 
+Content-Type: application/json
+
+{
+    "pid":1,
+    "pname":"xyz",
+    "price":500
+}
+
+###
+DELETE http://localhost:4000/product-api/delete-product/1
