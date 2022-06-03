@@ -9,27 +9,27 @@ function Userdashboard() {
     <>
       <img src={userObj.profileImg} className='float-end m-5 profile-pic' alt="" />
       <> 
-        {/* <Nav className="justify-content-center mt-3" defaultActiveKey="/profile"> 
+         <Nav className="justify-content-center mt-3" defaultActiveKey="/profile"> 
           <Nav.Item>
             <Nav.Link to="profile" as={NavLink}>
               User Profile
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link to="cart" as={NavLink}>
-              Cart
+            <Nav.Link to="mylist" as={NavLink}>
+              Mylist
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link to="products" as={NavLink}>
-              Products
+            <Nav.Link to="content" as={NavLink}>
+              Content
             </Nav.Link>
           </Nav.Item>
         </Nav>
         <div className="mt-3">
           <Outlet />
         </div>
-        */}
+       
       </>
     </>
   )

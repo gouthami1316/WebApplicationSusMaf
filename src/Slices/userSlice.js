@@ -8,7 +8,8 @@ export const userLogin=createAsyncThunk('loginuser',async(userCredentialsObj,thu
    console.log(response)
    let data=response.data;
    console.log(data);
-   if(data.message==='Login success'){
+   if(data.message==='Login success')
+   {
         //storing token browser's memory(local/session : use setItem(key,value),getItem(key),removeItem(key),clear())
         localStorage.setItem("token",data.payload);
         return data.userObj
