@@ -32,10 +32,10 @@ function Signup() {
         //append values to it
         formData.append("userObj", JSON.stringify(userObj));
         formData.append("photo", img);
-        //http post req
+        //http post req 
         axios.post('http://localhost:4000/user-api/create-user', formData)
             .then((response) => {
-                //console.log(userObj)
+                console.log(userObj)
                 //console.log(response)
                 if (response.data.message === "New User Created") {
                     navigate('/login')
@@ -72,6 +72,16 @@ function Signup() {
                             <Form.Control type="text" placeholder="Enter City" {...register("city", { required: true })} />
                             {errors.city && <p className="text-danger">City is required</p>}
                         </Form.Group>
+                        <Form.Group>
+                            <Form.Label>Social Medial Link</Form.Label>
+                            <Form.Control type="url" placeholder="Enter Profile Link" {...register("profilelink", { required: true })} />
+                            {errors.profilelink && <p className="text-danger">Profile Link is required</p>}
+                        </Form.Group>
+                        <Form.Group>
+                            <Form.Label>Preference Domain</Form.Label>
+                            <Form.Control type="text" placeholder="Preference Domain" {...register("domain", { required: true })} />
+                            {errors.city && <p className="text-danger">Domain is required</p>}
+                        </Form.Group>
                         {/* profile image */}
                         <Form.Group className="mb-3">
                             <Form.Label>Select image</Form.Label>
@@ -94,5 +104,6 @@ function Signup() {
         </>
     )
 }
+
 
 export default Signup

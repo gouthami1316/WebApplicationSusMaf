@@ -1,0 +1,85 @@
+.second{
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+.second .img{
+    width: 100%;
+    height: 250px;
+    object-fit:cover
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 10px;
+}
+.post{
+    display: flex;
+    flex: 4;
+    border: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding:5px;
+}
+.desc{
+    display: flex;
+    align-items: center;
+}
+.search{
+    display: flex;
+    align-items: center;
+    border: 0.5px solid lightgrey;
+    padding: 3px;
+    
+}
+
+input{
+    border: none;
+    outline: none;
+    background:transparent ;
+}
+.avatar{
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    margin: 10px;
+}
+.icon{
+    margin: 10px;
+}
+.side{
+    flex: 2;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+.about{
+    border: 1px solid black;
+    padding: 5px;
+}
+ h4{
+    margin: 5px auto 5px;
+}
+.connection{
+    border: 1px solid black;
+    margin-top: 10px;
+    padding: 10px;
+}
+.link{
+    display: flex;
+    justify-content: space-between;
+}
+.link span {
+    color: red;
+}
+.chaticon{
+    padding: 12px 13px ;
+    background-color: rgb(23, 113, 23);
+    width: fit-content;
+    margin-top: 15px;
+    border-radius: 40%;
+    color: white;
+
+}

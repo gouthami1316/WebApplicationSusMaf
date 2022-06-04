@@ -34,11 +34,11 @@ mclient.connect(DBurl)
   //create db obj
   let dbObj=client.db("firstdb")
   let userCollectionObject=dbObj.collection("usercollection");
-  let productCollectionObject=dbObj.collection("productcollection")
+  let domainCollectionObject=dbObj.collection("domainCollection")
   //sharing collection objects to api's
 
   app.set("userCollectionObject",userCollectionObject);
-  app.set("productCollectionObject",productCollectionObject)
+  app.set("domainCollectionObject",domainCollectionObject)
   console.log("DB connection success")
 })
 .catch(err=>console.log("Error in DB connection",err))

@@ -1,9 +1,13 @@
 import React from 'react'
-
-function mylist() {
+//import axios from 'axios';
+function Mylist() {
+    
   return (
-    <div>mylist</div>
+
+    <div>
+        MyList
+    </div>
   )
 }
 
-export default mylist
+export default Mylist;

@@ -4,8 +4,8 @@ import { Form, Button } from "react-bootstrap";
 import { MdLogin } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
-import { userLogin } from '../Slices/userSlice'
-import loginImg from "../Images/undraw_learning_sketching_nd4f.svg";
+import { userLogin } from '../../Slices/userSlice'
+//import loginImg from 
 //import axios from 'axios';
 
 
@@ -37,11 +37,14 @@ function Login() {
     if (isSuccess) {
       navigate('/userdashboard')
     }
+   if(isError){
+      alert("Invalid Password/Username")
+    }
   }, [isSuccess, isError]);
   return (
     <div className="container">
       <p className="display-2 text-center text-primary">Login</p>
-      <img src={loginImg} width="300px" className="d-sm-block d-none mx-auto" alt="" />
+      {/* //<img src={loginImg} width="300px" className="d-sm-block d-none mx-auto" alt="" /> */}
       <Form className="w-50 mx-auto" onSubmit={handleSubmit(onFormSubmit)}>
         <Form.Group className="mb-3">
           <Form.Label>Select type of User</Form.Label> <br />

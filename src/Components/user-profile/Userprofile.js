@@ -18,6 +18,9 @@ function Userprofile() {
         <Card.Text>
          {userObj.city}
         </Card.Text>
+        <Card.Link>
+         {userObj.profilelink}
+        </Card.Link>
         <Button variant="primary">Edit</Button>
       </Card.Body>
     </Card>

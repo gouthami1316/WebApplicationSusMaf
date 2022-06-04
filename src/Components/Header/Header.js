@@ -5,18 +5,19 @@ import { Route, Routes } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { useSelector } from "react-redux";
 import { useNavigate, Navigate } from 'react-router-dom';
-import { clearLoginStatus } from '../Slices/userSlice'
-import Userdashboard from "../Components/userdashboard/Userdashboard"
-import Home from "./Home";
-import Login from "./Login";
-import Signup from "./Signup";
-import Contactus from "./Contactus"
-import Userprofile from "./user-profile/Userprofile";
-import MyList from "./mylist/mylist";
-import Content  from "./view-content/ViewContent";
+import { clearLoginStatus } from '../../Slices/userSlice'
+import Userdashboard from "../userdashboard/Userdashboard"
+import Home from "../Home/Home";
+import Login from "../Login/Login";
+import Signup from "../Signup";
+import Contactus from "../Contactus/Contactus"
+import Userprofile from "../user-profile/Userprofile";
+import Leaderboard from "../board"
+import Content  from "../view-content/ViewContent";
 import React from 'react'
-
-
+//import Askregistration from "../Askregistration";
+import pic from "./logo.jpg"
+import "./logo.css"
 
 function Header() {
   //get state from store
@@ -34,11 +35,15 @@ function Header() {
     navigate('/login')
   }
   return (
-    <div>
-
-      <Navbar collapseOnSelect bg="dark" expand="sm lg md xl xxl">
+    <div className="Container">
+    
+      <Navbar collapseOnSelect bg="success" expand="sm lg md xl xxl">
         <Container>
-          <Navbar.Brand href="#home" className="text-white">WebsiteName</Navbar.Brand>
+          <div className="logo">
+          <img className="pic" src={pic} />
+          </div>
+
+          
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
             <Nav className="ms-auto">
@@ -95,12 +100,13 @@ function Header() {
         <Route path="/login" element={<Login />} />
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/userdashboard" element={<Userdashboard />} >
-          <Route path="mylist" element={<MyList/>} />
+          <Route path="Leaderboard" element={<Leaderboard/>} />
           <Route path="content" element={<Content />} />
           <Route path="profile" element={<Userprofile />} />
           {/* Navigating into profile when child path is empty */}
           <Route path="" element={<Navigate to="profile" replace={true} />} />
         </Route>
+        {/* <Route path="/AskRegistration" element={<Askregistration />} /> */}
       </Routes>
 
     </div>

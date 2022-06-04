@@ -1,0 +1,14 @@
+.logo {
+    float:left;
+   
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 100px;
+    border-radius: 50px;
+  }
+  .xyz {
+      background-repeat: no-repeat;
+
+  }

@@ -15,7 +15,8 @@ export const userLogin=createAsyncThunk('loginuser',async(userCredentialsObj,thu
         return data.userObj
 
     }
-   if(data.message==='Invalid Password' || data.message==="User doesn't exist"){
+   if(data.message==='Invalid Password' || data.message==="User doesn't exist")
+   {
        return thunkApi.rejectWithValue(data)
       
    }
